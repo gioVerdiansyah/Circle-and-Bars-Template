@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circle-progres</title>
+    <link rel="stylesheet" href="css-circle.css" />
+</head>
+
+<body>
+    <!-- circle one -->
+    <div class="wrapping-the-two-circle">
+        <div class="box">
+            <div class="percent">
+                <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <!-- this section sets the thickness of the circle, cx=horizontal, cy=vertical, r=radius -->
+            <circle cx="70" cy="70" r="70"></circle>
+          </svg>
+                <div class="number">
+                    <h2>32<span>%</span></h2>
+                </div>
+            </div>
+            <h2 class="text">progress</h2>
+        </div>
+        <!-- circle two -->
+        <div class="skill">
+            <div class="outer">
+                <div class="inner">
+                    <div id="number">
+                        <!-- this value is in the content of JavaScript (65%) -->
+                    </div>
+                </div>
+            </div>
+            <svg xmlnx="https://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#ff2600" />
+              <!-- These two colors can be replaced and added a few more stop offset -->
+              <stop offset="100%" stop-color="#45ff0d" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+          <!-- this section sets the thickness of the circle, cx=horizontal, cy=vertical, r=radius -->
+        </svg>
+        </div>
+
+        <!-- bar progres -->
+
+        <div class="skillls">
+            <h2>Coding Skills</h2>
+            <li>
+                <h4>Html&CSS</h4>
+                <span class="bar"> <span class="html-CSS"></span></span>
+            </li>
+            <li>
+                <h4>JavaScript</h4>
+                <span class="bar"> <span class="JavaScript"></span></span>
+            </li>
+            <li>
+                <h4>Ilustrator</h4>
+                <span class="bar"> <span class="Ilustrator"></span></span>
+            </li>
+            <li>
+                <h4>Design</h4>
+                <span class="bar"> <span class="UI-UX"></span></span>
+            </li>
+        </div>
+    </div>
+</body>
+<script>
+    let number = document.getElementById("number"); //select id
+    let counter = 0;
+    setInterval(() => {
+        if (counter == 65) {
+            //what number do you want to stop at?
+            clearInterval();
+        } else {
+            counter += 1;
+            number.innerHTML = counter + "%"; //string percent
+        }
+    }, 45); //long duration
+</script>
+
+</html>
